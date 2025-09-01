@@ -1,0 +1,21 @@
+query mySubmissions($offset: Int!, $limit: Int!) {
+  submissionList(offset: $offset, limit: $limit) {
+    submissions {
+      id
+      title
+      titleSlug
+      statusDisplay
+      lang
+      timestamp
+    }
+    hasNext
+  }
+}
+
+# Example Query Variables:
+# {
+#   "offset": 1540,
+#   "limit": 1550
+# }
+# Headers:
+# Cookie: LEETCODE_SESSION=eyJ0eXAiOiJK_EXAMPLE_SESSION
